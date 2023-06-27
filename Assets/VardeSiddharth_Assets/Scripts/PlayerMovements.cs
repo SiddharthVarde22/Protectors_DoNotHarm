@@ -13,6 +13,7 @@ public class PlayerMovements : MonoBehaviour
     void Start()
     {
         transform.position = Vector3.zero;
+        MoveTurnManager.Instance.SetPlayertransform(transform);
     }
 
     // Update is called once per frame
