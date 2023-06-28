@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/VardeSiddharth_Assets/Scenes/Gameplay.unity
+    path: Assets/VardeSiddharth_Assets/Scenes/MainMenu.unity
+    guid: bfde63f417cda494f8ba85056fb60f89
+  - enabled: 1
+    path: Assets/VardeSiddharth_Assets/Scenes/Gameplay_Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/VardeSiddharth_Assets/Scenes/Gameplay_Level2.unity
+    guid: e71a21ad3ce9562458d210ba292875d1
+  - enabled: 1
+    path: Assets/VardeSiddharth_Assets/Scenes/Gameplay_Level3.unity
+    guid: 8dbbcd5b24e4d9d47a317deb11fb651e
+  - enabled: 1
+    path: Assets/VardeSiddharth_Assets/Scenes/Gameplay_Level4.unity
+    guid: 4fef2fde1a63b44478bebf59b9cbd0b4
   m_configObjects: {}
