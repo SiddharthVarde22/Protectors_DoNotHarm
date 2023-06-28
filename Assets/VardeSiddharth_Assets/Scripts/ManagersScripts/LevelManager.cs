@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
     {
         if(GameManager.Instance.GetHasAnimalBeenKilled())
         {
-            levelFailedText.text = "Level Failed!\n\nYou have killed the Protector";
+            levelFailedText.text = "Level Failed!\n\nYou have killed the Dog";
             levelFailedPanel.SetActive(true);
         }
         else

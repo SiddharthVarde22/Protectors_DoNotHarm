@@ -59,7 +59,14 @@ public class MoveTurnManager : MonoBehaviour
         }
         else
         {
-            StartCoroutine(MoveAnimal());
+            if (animalMovemetns != null)
+            {
+                StartCoroutine(MoveAnimal());
+            }
+            else
+            {
+                ChangeMovementTurn(MovementTurn.Player);
+            }
         }
     }
 
