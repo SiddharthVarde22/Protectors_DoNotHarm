@@ -56,4 +56,11 @@ public class AnimalMovements : MonoBehaviour
             playerHealth.HurtPlayer();
         }
     }
+
+    public void AnimalDied()
+    {
+        //tell the movement manager that animal has been killed
+        GameManager.Instance.OnAnimalHasBeenKilled();
+        Destroy(gameObject);
+    }
 }

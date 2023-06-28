@@ -18,6 +18,7 @@ public class MoveTurnManager : MonoBehaviour
     AnimalMovements animalMovemetns;
     MovementTurn movementTurn = MovementTurn.Player;
 
+
     private void Awake()
     {
         if(Instance == null)
@@ -42,14 +43,15 @@ public class MoveTurnManager : MonoBehaviour
         playerMovements = player.GetComponent<PlayerMovements>();
     }
 
-    public void SetAnimalMovements(AnimalMovements animalMovements)
-    {
-        this.animalMovemetns = animalMovements;
-    }
-
     public Transform GetPlayerTransform()
     {
         return playerTransform;
+    }
+
+    public void SetAnimalMovements(AnimalMovements animalMovements)
+    {
+        this.animalMovemetns = animalMovements;
+        GameManager.Instance.OnAnimalSpawned();
     }
 
     public void ChangeMovementTurn(MovementTurn movementTurn)
@@ -69,7 +71,10 @@ public class MoveTurnManager : MonoBehaviour
     IEnumerator MoveAnimal()
     {
         yield return new WaitForSeconds(1);
-        animalMovemetns.Move();
+        if (animalMovemetns != null)
+        {
+            animalMovemetns.Move();
+        }
         ChangeMovementTurn(MovementTurn.Player);
     }
 }
