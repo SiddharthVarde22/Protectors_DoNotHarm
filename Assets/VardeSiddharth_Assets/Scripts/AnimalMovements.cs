@@ -11,19 +11,10 @@ public class AnimalMovements : MonoBehaviour
     void Start()
     {
         playerTransform = MoveTurnManager.Instance.GetPlayerTransform();
+        MoveTurnManager.Instance.SetAnimalMovements(this);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("move");
-            Move();
-        }
-    }
-
-    void Move()
+    public void Move()
     {
         CalculateDirectionOfMovement();
 
