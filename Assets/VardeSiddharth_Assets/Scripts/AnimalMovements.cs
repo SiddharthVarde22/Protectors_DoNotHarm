@@ -46,4 +46,14 @@ public class AnimalMovements : MonoBehaviour
         //normalize the direction so the entity moves only one tile
         directionToMove.Normalize();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        PlayerHealthSystem playerHealth;
+
+        if(collision.TryGetComponent<PlayerHealthSystem>(out playerHealth))
+        {
+            playerHealth.HurtPlayer();
+        }
+    }
 }
