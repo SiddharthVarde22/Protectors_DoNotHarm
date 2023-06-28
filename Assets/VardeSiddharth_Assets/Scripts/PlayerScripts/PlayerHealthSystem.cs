@@ -25,6 +25,7 @@ public class PlayerHealthSystem : MonoBehaviour
         if (playerHealth <= 0)
         {
             playerHealth = 0;
+            LevelManager.Instance.OnPlayerDied();
             //player deth
             return;
         }

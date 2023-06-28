@@ -32,11 +32,6 @@ public class MoveTurnManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        
-    }
-
     public void SetPlayerRefrences(Transform player)
     {
         playerTransform = player;
